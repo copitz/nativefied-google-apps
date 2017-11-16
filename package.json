@@ -1,0 +1,24 @@
+{
+  "name": "nativefied-google-calendar",
+  "version": "1.0.0",
+  "description": "Utility to nativefy Google Calendar as Electron Desktop App",
+  "scripts": {
+    "nativefy": "nativefier --inject=inject.js 'https://calendar.google.com'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/copitz/nativefied-google-calendar.git"
+  },
+  "keywords": [
+    "electron",
+    "google",
+    "calendar",
+    "nativefier"
+  ],
+  "author": "Christian Opitz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/copitz/nativefied-google-calendar/issues"
+  },
+  "homepage": "https://github.com/copitz/nativefied-google-calendar#readme"
+}
