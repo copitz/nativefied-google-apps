@@ -1,14 +1,15 @@
-# Nativefied Google Calendar
+# Nativefied Google Apps
 
-Nativefies Google Calendar as electron app minimizable to tray.
+Nativefies several Google Apps as electron app minimizable to tray.
 
-## Nativefy Google Calendar
+## Installation + Usage
 
 ```
 [sudo] npm install nativefier -g
-git clone https://github.com/copitz/nativefied-google-calendar.git google-calendar
-cd google-calendar
-npm run nativefy
+git clone https://github.com/copitz/nativefied-google-apps.git google-apps
+cd google-apps
+npm run calendar
+npm run mail
 ```
 
-The app will be generated in a google-calendar-* folder.
+The apps will be in related folders in the current directory.
