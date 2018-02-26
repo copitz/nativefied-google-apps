@@ -16,7 +16,20 @@ ipcRenderer.on('params', (event, message) => {
     const iconPath = path.join(__dirname, '../', '/icon.png');
     const appIcon = new Tray(iconPath);
 
-    const onClick = () => {
+    const contextMenu = Menu.buildFromTemplate([
+      {
+        label: options.name,
+        click: () => {
+            mainWindow.loadURL(options.targetUrl);
+        },
+      },
+      {
+        label: 'Quit',
+        click: app.exit,
+      },
+    ]);
+
+    appIcon.on('click', () => {
       if (mainWindow.isVisible()) {
         if (mainWindow.isFocused()) {
             mainWindow.hide();
@@ -26,20 +39,7 @@ ipcRenderer.on('params', (event, message) => {
       } else {
         mainWindow.show();
       }
-    };
-
-    const contextMenu = Menu.buildFromTemplate([
-      {
-        label: options.name,
-        click: onClick,
-      },
-      {
-        label: 'Quit',
-        click: app.exit,
-      },
-    ]);
-
-    appIcon.on('click', onClick);
+    });
 
     mainWindow.on('show', () => {
       appIcon.setHighlightMode('always');

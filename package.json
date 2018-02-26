@@ -4,7 +4,8 @@
   "description": "Utility to nativefy Google Calendar as Electron Desktop App",
   "scripts": {
     "calendar": "nativefier --inject=inject.js 'https://calendar.google.com'",
-    "mail": "nativefier --inject=inject.js 'https://mail.google.com'"
+    "mail": "nativefier --inject=inject.js 'https://mail.google.com'",
+    "inbox": "nativefier --inject=inject.js --name=google-inbox 'https://inbox.google.com'"
   },
   "repository": {
     "type": "git",
